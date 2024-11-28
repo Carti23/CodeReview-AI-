@@ -13,7 +13,7 @@ Start by cloning the project from GitHub:
 
 ```bash
 git clone git@github.com:Carti23/CodeReview-AI-.git
-cd CodeReviewAI
+cd CodeReview-AI-
 ```
 
 ---
