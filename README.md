@@ -39,10 +39,8 @@ Configuration is managed through environment variables, making it easy to adapt 
 
 ## 🔧 Features
 
-- **Automated Code Review**: Leverages OpenAI GPT API for analyzing code submissions and providing feedback.
 - **GitHub Integration**: Supports cloning and analyzing repositories, managing large repositories with 100+ files.
 - **High Scalability**: Handles over 100 review requests per minute with a distributed architecture.
-- **Queue Management**: Uses asynchronous processing for efficient task handling.
 
 ---
 
