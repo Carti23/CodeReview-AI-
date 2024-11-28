@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+    - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+  redis:
+    image: redis:alpine
+    container_name: redis_instance
+    ports:
+      - "6379:6379"
