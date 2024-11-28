@@ -12,40 +12,28 @@
 Start by cloning the project from GitHub:
 
 ```bash
-git clone git@github.com:Lehsqa/CodeReviewAI.git
+git clone git@github.com:Carti23/CodeReview-AI-.git
 cd CodeReviewAI
 ```
 
 ---
 
-## ⚙️ Running the Application
+## 🖥️ Deployment Instructions
 
-To run the backend application locally:
+### Using Docker Compose
 
-```bash
-# For development
-make backend.run
-```
+1. Build and run the application using Docker Compose:
+   ```bash
+   docker-compose up --build
+   ```
+
+2. Verify the application is running at the specified endpoint.
 
 ---
 
 ## 🛠️ Configuring the Application
 
-Configuration is managed through environment variables, making it easy to adapt the application to different setups. 
-
-The project leverages **Pydantic Config** for an efficient configuration process. You can customize any setting encapsulated in the `src/config.py:settings` object by defining the corresponding environment variable.
-
-### Using a `.env` File
-
-1. Create a `.env` file based on the template provided:
-   ```bash
-   cp .env.default .env
-   ```
-2. Load the environment variables:
-   ```bash
-   # On Unix systems
-   set -o allexport; source .env; set +o allexport
-   ```
+Configuration is managed through environment variables, making it easy to adapt the application to different setups. You need to have kesy for (GithubAPI, OpenAI)
 
 ---
 
@@ -75,25 +63,6 @@ To scale the system for high traffic and large repositories, the architecture is
 ### API Rate Limits
 - Cache GitHub repository data with **Redis** to minimize API calls.
 - Optimize OpenAI API payloads for efficient usage and consider alternative APIs like **Hugging Face** if necessary.
-
----
-
-## 🖥️ Deployment Instructions
-
-### Using Docker Compose
-
-1. Build and run the application using Docker Compose:
-   ```bash
-   docker-compose up --build
-   ```
-
-2. Verify the application is running at the specified endpoint.
-
-### CI/CD Pipeline
-
-To automate deployments:
-- Use GitHub Actions to push new code.
-- Deploy the changes with `docker-compose up` on the production server.
 
 ---
 
